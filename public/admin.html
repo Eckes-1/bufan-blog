@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bufan Blog 管理后台</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body class="admin-shell">
+  <aside class="admin-sidebar glass">
+    <a class="brand" href="/"><span class="brand-mark">B</span><span>Bufan Admin</span></a>
+    <p>管理文章、草稿、精选状态、标签与封面。演示令牌：<code>bufan-admin</code></p>
+    <label class="token-box">后台令牌<input id="tokenInput" type="password" placeholder="输入 ADMIN_TOKEN"></label>
+    <button class="button primary" id="saveToken" type="button">保存令牌</button>
+    <a class="button ghost" href="/">返回前台</a>
+  </aside>
+
+  <main class="admin-main">
+    <header class="admin-header reveal">
+      <div>
+        <p class="eyebrow">Dashboard</p>
+        <h1>动态博客管理后台</h1>
+      </div>
+      <button class="button primary magnetic" id="newPost" type="button">新建文章</button>
+    </header>
+
+    <section class="admin-stats" id="adminStats"></section>
+
+    <section class="editor-layout">
+      <form id="postForm" class="editor-card glass reveal">
+        <input type="hidden" id="postId">
+        <div class="form-grid">
+          <label>标题<input id="title" required placeholder="文章标题"></label>
+          <label>Slug<input id="slug" placeholder="url-slug"></label>
+          <label>分类<input id="category" required placeholder="工程实践"></label>
+          <label>封面图 URL<input id="cover" placeholder="https://..."></label>
+        </div>
+        <label>摘要<textarea id="excerpt" rows="3" placeholder="一句话说明文章价值"></textarea></label>
+        <label>正文<textarea id="content" rows="10" required placeholder="支持纯文本段落，前台会自动分段展示"></textarea></label>
+        <label>标签（逗号分隔）<input id="tags" placeholder="Node.js, 动画, 博客"></label>
+        <div class="switch-row">
+          <label class="switch"><input id="published" type="checkbox"><span></span>发布</label>
+          <label class="switch"><input id="featured" type="checkbox"><span></span>精选</label>
+        </div>
+        <div class="form-actions">
+          <button class="button primary" type="submit">保存文章</button>
+          <button class="button danger" id="deletePost" type="button">删除当前</button>
+        </div>
+      </form>
+
+      <section class="post-table glass reveal">
+        <div class="table-head">
+          <h2>内容库</h2>
+          <input id="adminSearch" type="search" placeholder="筛选文章...">
+        </div>
+        <div id="adminPosts" class="admin-post-list"></div>
+      </section>
+    </section>
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="/admin.js" defer></script>
+</body>
+</html>

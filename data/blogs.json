@@ -1,0 +1,65 @@
+{
+  "profile": {
+    "name": "Bufan",
+    "title": "全栈开发者 · 设计爱好者 · 终身学习者",
+    "bio": "记录技术、产品、设计与生活灵感，用一个动态博客持续打磨个人品牌。",
+    "location": "互联网",
+    "email": "hello@bufan.dev",
+    "heroTags": ["动态内容", "沉浸动效", "后台管理", "多端体验"]
+  },
+  "posts": [
+    {
+      "id": "post-aurora-stack",
+      "title": "把个人博客做成一座会呼吸的数字花园",
+      "slug": "dynamic-digital-garden",
+      "category": "产品设计",
+      "excerpt": "从静态页面升级到可运营、可互动、可增长的个人内容系统。",
+      "content": "真正有生命力的博客不只是文章列表，而是一套持续生长的内容产品。它需要前台展示、后台管理、搜索筛选、反馈互动、数据洞察与稳定的内容存储。\n\n这个版本采用轻量 Node.js 服务提供 API，前台通过异步请求获取文章、评论和反应数据，后台可以实时创建、编辑、发布或下线文章。\n\n下一步可以接入数据库、账号体系、图片上传、RSS、全文检索和部署流水线，让博客从作品展示变成长期资产。",
+      "cover": "https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=1200&q=80",
+      "tags": ["博客系统", "动态网站", "内容运营"],
+      "featured": true,
+      "published": true,
+      "views": 3280,
+      "likes": 128,
+      "createdAt": "2026-05-16T10:00:00.000Z",
+      "updatedAt": "2026-05-20T16:30:00.000Z",
+      "comments": [
+        {"id":"c-1","author":"Mira","message":"这个方向太适合个人品牌了，期待数据库版本！","createdAt":"2026-05-21T08:15:00.000Z"}
+      ]
+    },
+    {
+      "id": "post-motion-ui",
+      "title": "界面动效不是装饰，而是叙事节奏",
+      "slug": "motion-ui-rhythm",
+      "category": "交互体验",
+      "excerpt": "用滚动、悬浮、粒子、渐变和微反馈让阅读更有情绪。",
+      "content": "动效的价值不是炫技，而是帮助用户理解层级、状态和路径。首页的星云背景营造第一印象，卡片悬浮暗示可点击，阅读进度条给出明确反馈，后台统计卡片让管理者快速建立掌控感。\n\n好的交互动效通常具备三个特征：足够轻、足够快、足够有目的。用户不应该等待动画结束才能完成任务，也不应该因为动效失去方向。",
+      "cover": "https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=1200&q=80",
+      "tags": ["UI", "动画", "体验"],
+      "featured": false,
+      "published": true,
+      "views": 2140,
+      "likes": 96,
+      "createdAt": "2026-04-28T09:30:00.000Z",
+      "updatedAt": "2026-04-30T11:12:00.000Z",
+      "comments": []
+    },
+    {
+      "id": "post-admin-workflow",
+      "title": "后台管理的核心，是让创作阻力趋近于零",
+      "slug": "admin-workflow-zero-friction",
+      "category": "工程实践",
+      "excerpt": "一个顺手的后台应该让草稿、发布、筛选和统计全部在一个界面完成。",
+      "content": "很多个人博客最后停更，并不是因为作者没有内容，而是发布流程太重。动态后台的意义在于把内容管理做成习惯：打开后台、写摘要、补标签、发布、查看反馈。\n\n本项目的后台提供文章 CRUD、发布状态、特色推荐、分类标签和统计预览。即使当前使用 JSON 文件存储，也已经具备迁移到数据库的清晰边界。",
+      "cover": "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1200&q=80",
+      "tags": ["Node.js", "后台", "CRUD"],
+      "featured": true,
+      "published": true,
+      "views": 1850,
+      "likes": 73,
+      "createdAt": "2026-03-19T14:45:00.000Z",
+      "updatedAt": "2026-04-01T07:20:00.000Z",
+      "comments": []
+    }
+  ]
+}
