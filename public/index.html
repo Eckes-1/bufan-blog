@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bufan Blog · 动态个人博客</title>
+  <meta name="description" content="一个带前台、后台、动态 API、动画与互动的个人博客。">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body class="site-shell">
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <div class="progress" id="readProgress" aria-hidden="true"></div>
+  <header class="topbar glass">
+    <a class="brand" href="/"><span class="brand-mark">B</span><span>Bufan Blog</span></a>
+    <nav class="nav-links" aria-label="主导航">
+      <a href="#posts">文章</a>
+      <a href="#about">关于</a>
+      <a href="/admin">管理后台</a>
+      <button class="icon-button" id="themeToggle" type="button" aria-label="切换主题">☾</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section-grid">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">Dynamic Personal Blog</p>
+        <h1>把个人博客升级成<br><span class="gradient-text">会互动、会运营、会生长</span>的数字空间。</h1>
+        <p id="profileBio" class="hero-lead">正在加载个人简介...</p>
+        <div id="heroTags" class="tag-row"></div>
+        <div class="hero-actions">
+          <a class="button primary magnetic" href="#posts">开始阅读</a>
+          <a class="button ghost magnetic" href="/admin">进入后台</a>
+        </div>
+      </div>
+      <div class="hero-orb reveal" aria-label="动态博客功能概览">
+        <div class="orb-ring"></div>
+        <div class="floating-card card-a"><strong>API</strong><span>实时文章</span></div>
+        <div class="floating-card card-b"><strong>CMS</strong><span>后台管理</span></div>
+        <div class="floating-card card-c"><strong>UX</strong><span>微交互</span></div>
+      </div>
+    </section>
+
+    <section class="stats-bar glass reveal" aria-label="博客统计">
+      <article><strong id="postCount">0</strong><span>篇内容</span></article>
+      <article><strong id="viewCount">0</strong><span>阅读量</span></article>
+      <article><strong id="likeCount">0</strong><span>喜欢</span></article>
+      <article><strong id="commentCount">0</strong><span>评论</span></article>
+    </section>
+
+    <section id="posts" class="content-section">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Latest Notes</p>
+        <h2>精选文章</h2>
+        <p>支持搜索、分类筛选、点赞、评论和弹窗阅读，内容来自后端 JSON 数据接口。</p>
+      </div>
+      <div class="toolbar glass reveal">
+        <label class="search-box">
+          <span>⌕</span>
+          <input id="searchInput" type="search" placeholder="搜索标题、摘要或标签...">
+        </label>
+        <div id="categoryFilters" class="filter-list"></div>
+      </div>
+      <div id="postsGrid" class="posts-grid" aria-live="polite"></div>
+    </section>
+
+    <section id="about" class="about-panel glass reveal">
+      <div>
+        <p class="eyebrow">About This Site</p>
+        <h2>不是静态模板，而是完整的动态博客雏形。</h2>
+      </div>
+      <div class="feature-list">
+        <span>Node.js 原生 HTTP 服务</span>
+        <span>JSON 文件持久化</span>
+        <span>后台文章 CRUD</span>
+        <span>发布/草稿状态</span>
+        <span>点赞与评论互动</span>
+        <span>滚动揭示与磁吸按钮</span>
+      </div>
+    </section>
+  </main>
+
+  <dialog id="postDialog" class="post-dialog">
+    <button class="dialog-close" type="button" data-close>×</button>
+    <article id="dialogContent"></article>
+  </dialog>
+
+  <footer class="site-footer">© 2026 Bufan Blog · Built for dynamic storytelling.</footer>
+  <script src="/app.js" defer></script>
+</body>
+</html>
